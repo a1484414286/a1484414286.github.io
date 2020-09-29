@@ -15,5 +15,5 @@
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2Fstir-fried-egg-and-tomato-352835&psig=AOvVaw1imuHbeoJmrBRKyl_vcmXM&ust=1601485113422000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjjipHrjuwCFQAAAAAdAAAAABAD) and ![Image](src)
+[Link](url) and ![Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2Fstir-fried-egg-and-tomato-352835&psig=AOvVaw1imuHbeoJmrBRKyl_vcmXM&ust=1601485113422000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjjipHrjuwCFQAAAAAdAAAAABAD)
 ```
