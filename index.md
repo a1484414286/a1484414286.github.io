@@ -14,12 +14,21 @@ Syntax highlighted code block
 # Header 1
 ## Header 2
 ### Header 3
+<!DOCTYPE html>
+<html>
+<body>
 
-- Bulleted
-- List
+<h2>A Description List</h2>
 
-1. Numbered
-2. List
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+</body>
+</html>
 
 **Bold** and _Italic_ and `Code` text
 
