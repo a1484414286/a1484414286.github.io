@@ -13,7 +13,24 @@
 </body>
 </html>
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](https://www.rit.edu/computing/department-software-engineering) and ![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2Fstir-fried-egg-and-tomato-352835&psig=AOvVaw1imuHbeoJmrBRKyl_vcmXM&ust=1601485113422000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjjipHrjuwCFQAAAAAdAAAAABAD)
-```
+[SE](https://www.rit.edu/computing/department-software-engineering) and ![image](http://www.meishijr.com/d/swfup/20180803/15332600787.jpg)
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Things that I learned</h2>
+
+<ul>
+  <li>Client-focused</li>
+  <li>Different from CS major</li>
+  <li>our civilization runs on software</li>
+  <li>Soft Engineers are more on solving problems</li>
+  <li>It create, maintain,and manage software apps</li>
+  <li>documenting the system or application in detail to help those responsible for future maintenance</li>
+</ul>  
+
+</body>
+</html>
+
