@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CardItem from './CardItem';
+import { CircularProgress } from '@mui/material';
 
 export default class ProjectsSection extends Component {
     render() {
@@ -13,14 +14,20 @@ export default class ProjectsSection extends Component {
         ["🍆", 260, 290],
         ["🍇", 290, 320]
         ];
-          
+
     return (
       <div>
-      {projectItems.map(([img,hueA,hueB]) =>
-        (
-            <CardItem key = {img} img = {img} hueA = {hueA} hueB = {hueB}></CardItem>
-        ))}
+
+        <h3>
+          Projects
+        </h3>
+      <div>
+        <CircularProgress></CircularProgress>
+        {projectItems.map((img) =>
+          (<CardItem key = {img} img = {img}></CardItem>))}
+        </div>
       </div>
+      
     )
   }
 }

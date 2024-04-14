@@ -1,50 +1,42 @@
-import React from 'react'
 import {motion} from 'framer-motion'
 import '../css/CardItem.css'
+import React from 'react';
 
 
 export default class CardItem extends React.Component {
     render()
     {
-        const variants = 
+        const variants =
         {
-            offscreen : 
+            offscreen:
             {
-                y:300
+                y: 300,
             },
             onscreen:
             {
-                y:50,
-                rotate : -10,
+                y: 100,
+
+                rotate: 0,
                 transition:
                 {
-                    type:"spring",
-                    bounce:0.4,
-                    duration : 0.8
+                    type: "spring",
+                    bounce: 0.4,
+                    duration: 0.8
                 }
             }
         };
 
-        const { img, hueA, hueB } = this.props;
-        const background = `linear-gradient(306deg, hsl(${hueA}, 100%, 50%), hsl(${hueB}, 100%, 50%))`;
-
-    
-    return(
-
-
-    <motion.div
-        className="card-container container"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}>
-
-
-        <div className="splash" style={{ background }} />
-        
-        <motion.div className="card" variants={variants}>
-            {img}
-        </motion.div>
-    </motion.div>
-  );
+        const { img} = this.props;
+        return(
+        <div>
+            <motion.div
+                className="card-container container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}>
+                <motion.div className="card" variants={variants}> {img}  </motion.div>
+            </motion.div>
+        </div>
+    );
     }
 }
