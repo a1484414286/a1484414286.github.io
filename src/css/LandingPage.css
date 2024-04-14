@@ -1,0 +1,21 @@
+.body
+{
+   background-color: #6bec68;
+   height : 74vh;
+   max-width: 100%;
+}
+
+.animated 
+{
+   margin-top:20%;
+   display : grid;
+   justify-content: center;
+   align-items: center;
+   position : relative;
+ }
+
+.checkoutButton
+{
+   justify-self: right;
+   width: 30%;
+}

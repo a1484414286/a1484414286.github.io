@@ -1,0 +1,22 @@
+span:hover{
+    text-decoration: underline;
+}
+
+.container
+{
+    display: flex;
+}
+
+.right-bar
+{
+    margin : 0;
+    margin-right : 30px;
+    display: flex;
+    justify-content:right;
+    align-items: right;
+    width : 100%;
+}
+
+span{
+    margin-right : 20px;
+}
