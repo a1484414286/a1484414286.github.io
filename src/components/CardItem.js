@@ -10,12 +10,12 @@ export default class CardItem extends React.Component {
         {
             offscreen:
             {
-                y: 300,
+                y: 400,
             },
 
-            hover:
+            onscreen:
             {
-                y: 100,
+                y: -10,
                 rotate: 0,
                 transition:
                 {
@@ -31,10 +31,8 @@ export default class CardItem extends React.Component {
         <div>
             <motion.div
                 className="card-container container"
-                initial="offscreen"
-                whileInView="hover"
                 viewport={{ once: false, amount: 0.8 }}>
-                <motion.div className="card" variants={variants}>{img}</motion.div>
+                <motion.div initial="offScreen" whileHover="onscreen" className="card" variants={variants}>{img}</motion.div>
             </motion.div>
         </div>
     );

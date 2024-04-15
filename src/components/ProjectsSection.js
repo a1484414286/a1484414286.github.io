@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CardItem from './CardItem';
-import { Grid, Box} from '@mui/material';
+import Carousel from 'react-material-ui-carousel'
 import ProgressBar from './ProgressBar';
 
 export default class ProjectsSection extends Component {
@@ -22,17 +22,9 @@ export default class ProjectsSection extends Component {
           Projects
         </h3>
         <ProgressBar></ProgressBar>
-        <Box>
-          <Grid container>          
-            {projectItems.map((img) =>(
-              <Grid item xs={2} md={4}>
-                <CardItem key = {img} img = {img}>
-                </CardItem>
-              </Grid>
-              ))}
-          </Grid>
-        </Box>
-
+        <Carousel>
+          {projectItems.map((img) =>(<CardItem key = {img} img = {img}></CardItem>))}
+        </Carousel>
       </div>
       
     )

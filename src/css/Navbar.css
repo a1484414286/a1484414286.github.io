@@ -10,8 +10,7 @@ span:hover{
 .right-bar
 {
     margin : 0;
-    margin-right : 30px;
-    display: flex;
+    display:flex;
     justify-content:right;
     align-items: right;
     width : 100%;

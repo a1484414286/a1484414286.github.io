@@ -15,7 +15,7 @@ export default function LandingPage() {
     <div className="body">
         <Navbar></Navbar>
         <div className='animated'>
-          <motion.div  initial="hidden" animate="visible" variants={lineVariants}>
+          <motion.div initial="hidden" animate="visible" variants={lineVariants}>
             <h4>Hi There,</h4>
             <h2>I'm Liang Liu, a Software Developer from Florida</h2>      
           </motion.div>
