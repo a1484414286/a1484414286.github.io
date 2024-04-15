@@ -1,0 +1,25 @@
+#root
+{
+    background-color: #F0F8FF;
+}
+
+
+.parent-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.projects-container {
+    /* Adjust as needed */
+    width: 50%;
+    margin: auto;
+  }
+  
+.carousel-wrapper {
+    /* Adjust as needed */
+    width: 60%;
+    margin: auto;
+  }
