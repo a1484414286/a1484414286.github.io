@@ -13,7 +13,7 @@ export default class ProgressBar extends Component {
             </linearGradient>
           </defs>
         </svg>
-        <CircularProgress variant='determinate' sx={{ 'svg circle': { stroke: 'url(#my_gradient)' } }} />
+        <CircularProgress value={50} sx={{ 'svg circle': { stroke: 'url(#my_gradient)' } }} />
       </React.Fragment>
     )
   }

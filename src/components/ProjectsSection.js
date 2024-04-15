@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import '../css/ProgressBar.css'
+
 import CardItem from './CardItem';
 import Carousel from 'react-material-ui-carousel'
 import ProgressBar from './ProgressBar';
