@@ -24,7 +24,7 @@ export default class Navbar extends Component {
           <span className='shadow'></span>
           <span className='edge'></span>
           <span className='front'>
-            About
+            Contact
           </span>
         </motion.button>
     </div>

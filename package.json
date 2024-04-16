@@ -3,7 +3,7 @@
   "name": "portfolio_website",
   "version": "0.1.0",
   "private": true,
-  "peerDependency":{
+  "peerDependency": {
     "react": "17.0.0 || ^18.2.0",
     "react-dom": "17.0.0 || ^18.2.0"
   },
@@ -18,7 +18,6 @@
     "framer-motion": "^11.0.28",
     "gh-pages": "^6.1.1",
     "install": "^0.13.0",
-
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-material-ui-carousel": "^3.4.2",

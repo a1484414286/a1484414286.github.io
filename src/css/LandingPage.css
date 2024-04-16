@@ -6,6 +6,7 @@
    position: relative;
    overflow: hidden;
    flex-direction: column;
+   
 }
 
 .animated 
@@ -38,6 +39,83 @@
    border-bottom: 100vh solid #2F3C7E; 
  }
  
- 
+ .button-stack
+ {
+   width: 30%;
+   height: 80vh;
+   display:flex;
+   flex-direction: column;
+   align-items:flex-end;
+   justify-content:flex-end;
+   gap: 20px;
+}
 
  
+span:hover{
+   text-decoration: none;
+}
+
+.down-arrow{
+   border-left: 1.5px solid #FBEAEB;
+   height: 35px;
+   width: 2%;
+   left: calc(50% - 1%);
+   position: absolute;
+   bottom: 0;
+}
+
+.arrow-container{
+   height: 45px;
+   width: 100%;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.arrow-container:hover .down-arrow {
+   margin-bottom: 2%;
+   transition: all .3s;
+   border-left: 2px solid #FBEAEB;
+   opacity: .9;
+}
+
+.arrow-container:hover .arrow-head{
+   bottom: 20px;
+   border-width: 0 3px 3px 0;
+   
+}
+
+.arrow-head{
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 70%;
+   left: -20%;
+   border: solid #FBEAEB;
+   border-width: 0 1.5px 1.5px 0;
+   display: inline-block;
+   padding: 4px;
+
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+}
+
+.about-me
+{
+   height: auto;
+   width: 100%;
+   align-items:end;
+   justify-content: end;
+   display: flex;
+}
+
+.projects
+{
+   height: auto;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   font: 400;
+}
