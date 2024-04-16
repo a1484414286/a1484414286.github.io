@@ -3,6 +3,7 @@ import { CircularProgress } from '@mui/material'
 
 export default class ProgressBar extends Component {
   render() {
+    const progressValue = this.props.progressValue;
     return (
         <React.Fragment>
         <svg width={0} height={0}>
@@ -13,7 +14,7 @@ export default class ProgressBar extends Component {
             </linearGradient>
           </defs>
         </svg>
-        <CircularProgress value={50} sx={{ 'svg circle': { stroke: 'url(#my_gradient)' } }} />
+        <CircularProgress variant='determinate' value={progressValue} sx={{ 'svg circle': { stroke: 'url(#my_gradient)' } }}></CircularProgress>
       </React.Fragment>
     )
   }

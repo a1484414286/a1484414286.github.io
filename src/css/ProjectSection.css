@@ -4,22 +4,24 @@
 }
 
 
-.parent-container
+.projects-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.carousel-wrapper {
+    width: 60%;
+    height : 400px;
+}
+
+
+.progress-bar-container
 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
-.projects-container {
-    /* Adjust as needed */
-    width: 50%;
-    margin: auto;
-  }
-  
-.carousel-wrapper {
-    /* Adjust as needed */
-    width: 60%;
-    margin: auto;
-  }

@@ -1,21 +1,43 @@
 .body
 {
-   background-color: #6bec68;
-   height : 74vh;
+   background-color: #FBEAEB;
+   height : 100vh;
    max-width: 100%;
+   position: relative;
+   overflow: hidden;
+   flex-direction: column;
 }
 
 .animated 
 {
-   margin-top:20%;
    display : grid;
    justify-content: center;
    align-items: center;
-   position : relative;
- }
+   position: absolute;
+   margin-top: 10%;
+   width: 100%;
+}
 
 .checkoutButton
 {
    justify-self: right;
    width: 30%;
 }
+
+ 
+.triangle {
+   position: absolute;
+   width: 0;
+   height: 0;
+}
+ 
+ .triangle-left {
+   top: 0;
+   left: 0;
+   border-right: 100vw solid transparent;
+   border-bottom: 100vh solid #2F3C7E; 
+ }
+ 
+ 
+
+ 
