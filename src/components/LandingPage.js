@@ -14,7 +14,8 @@ export default function LandingPage() {
 
   const color =
   {
-    color : "#FF8500"
+    color : "#FF8500",
+    "font-size" : "1.5em"
   }
   
   return (
@@ -28,7 +29,7 @@ export default function LandingPage() {
             <h2><span style= {color}>I'm Liang Liu, a Software developer from Florida </span></h2>
           </motion.div>
           <div className="about-me">
-            <button class="learn-more">
+            <button className="learn-more">
               <span aria-hidden="true" class="circle">
               <span class="icon arrow"></span>
               </span>
@@ -38,7 +39,7 @@ export default function LandingPage() {
         </div>
       
       <div className='button-stack'>
-        <Grid container spacing={1} >
+        <Grid container spacing={5} >
           <Grid item xs={1}>
             <IconButton aria-label='github-button'>
               <GitHubIcon fontSize='large'/>

@@ -80,9 +80,9 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
   .card {
-    height: 400px;
+    height: 300px;
     font-size: 64px;
-    width: 95%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,3 +118,29 @@
     );
   }
   
+  
+.card-image
+{
+  height: 20%;
+  width: auto;
+}
+
+.img-box
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height:100%;
+  width:100%;
+}
+  
+.title
+{
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  height: 100%;
+  width: 500%;
+}
+
+
