@@ -1,11 +1,10 @@
 import Navbar from './Navbar'
 import '../css/LandingPage.css'
 import {motion} from "framer-motion";
-import React from 'react';
 import {IconButton, Grid} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import AboutMe from './AboutMe'
+import React from 'react';
 
 export default function LandingPage() {
   const lineVariants = {
@@ -13,18 +12,28 @@ export default function LandingPage() {
     visible: { opacity: 1, x: 0, transition: { duration: 3.0 } },
   };
 
+  const color =
+  {
+    color : "#FF8500"
+  }
+  
   return (
     <div className="body">
       <div className='triangle triangle-left'></div>
       <div className='triangle triangle-right'></div>
         <Navbar></Navbar>
         <div className='animated'>
-          <motion.div initial="hidden" animate="visible" variants={lineVariants}>
-            <h4><span style={{color : '#FBEAEB'}}>Hi, there</span></h4>
-            <h2><span style={{color : '#FBEAEB'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm Liang Liu, a</span><span style={{color:"#2F3C7E"}}>Software developer from Florida </span></h2>
+          <motion.div  initial="hidden" animate="visible" variants={lineVariants}>
+            <h4><span style= {color}>Hi, there</span></h4>
+            <h2><span style= {color}>I'm Liang Liu, a Software developer from Florida </span></h2>
           </motion.div>
           <div className="about-me">
-            <AboutMe></AboutMe>
+            <button class="learn-more">
+              <span aria-hidden="true" class="circle">
+              <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Learn More</span>
+            </button>
           </div>
         </div>
       

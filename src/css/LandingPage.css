@@ -36,7 +36,7 @@
    top: 0;
    left: 0;
    border-right: 100vw solid transparent;
-   border-bottom: 100vh solid #2F3C7E; 
+   border-bottom: 100vh solid #2F3C7E ; 
  }
  
  .button-stack
@@ -59,22 +59,26 @@ span:hover{
    border-left: 1.5px solid #FBEAEB;
    height: 35px;
    width: 2%;
-   left: calc(50% - 1%);
-   position: absolute;
-   bottom: 0;
+   position: relative; 
+   display: flex; 
+   align-items: center; 
+   justify-content: center;
 }
 
 .arrow-container{
-   height: 45px;
+   height: 60px;
    width: 100%;
    justify-content: center;
    display: flex;
    align-items: center;
-   position: relative;
+   position: absolute;
+   bottom: -25px;
+   left: 51%;
+   transform: translateX(-50%);
 }
 
 .arrow-container:hover .down-arrow {
-   margin-bottom: 2%;
+   margin-bottom: 3%;
    transition: all .3s;
    border-left: 2px solid #FBEAEB;
    opacity: .9;
@@ -89,16 +93,17 @@ span:hover{
 .arrow-head{
    width: 0;
    height: 0;
-   position: absolute;
    top: 70%;
-   left: -20%;
+   left: -2%;
    border: solid #FBEAEB;
    border-width: 0 1.5px 1.5px 0;
    display: inline-block;
    padding: 4px;
-
    transform: rotate(45deg);
    -webkit-transform: rotate(45deg);
+   position: absolute; /* Change this */
+   bottom: -10px; /* Adjust as needed */
+   transform: translateX(-50%) rotate(45deg);
 }
 
 .about-me
@@ -112,10 +117,124 @@ span:hover{
 
 .projects
 {
+   color: #FBEAEB;
    height: auto;
    width: 100%;
-   align-items: center;
+   align-items: flex-start;
    justify-content: center;
    display: flex;
-   font: 400;
+   position: absolute;
+   bottom: 70px;
+   z-index: 1;
+   left: 50%;
+   transform: translateX(-50%);
 }
+
+button {
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   outline: none;
+   border: 0;
+   vertical-align: middle;
+   text-decoration: none;
+   background: transparent;
+   padding: 0;
+   font-size: inherit;
+   font-family: inherit;
+ }
+ 
+ button.learn-more {
+   width: 12rem;
+   height: auto;
+ }
+ 
+ button.learn-more .circle {
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   box-shadow: 0 0 5px 1px white;
+   position: relative;
+   display: block;
+   margin: 0;
+   width: 3rem;
+   height: 3rem;
+   background: #FF8500;
+   border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   left: 0.625rem;
+   width: 1.125rem;
+   height: 0.125rem;
+   background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+   position: absolute;
+   content: "";
+   top: -0.29rem;
+   right: 0.0625rem;
+   width: 0.625rem;
+   height: 0.625rem;
+   border-top: 0.125rem solid #fff;
+   border-right: 0.125rem solid #fff;
+   transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding: 0.75rem 0;
+   margin: 0 0 0 1.85rem;
+   color: #FF8500;
+   font-weight: 700;
+   line-height: 1.6;
+   text-align: center;
+   text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+   width: 100%;
+   box-shadow: 0 0 10px 2px white;
+ }
+ 
+ button:hover .button-text {
+   transform: translate(-1.7rem, 0);
+ }
+ 
+ button:hover .circle .icon.arrow {
+   background: #fff;
+   transform: translate(8.7rem, 0);
+ }
+ 
+ button:active .circle .icon.arrow {
+   transform: translate(9.5rem, 0);
+   transition: all 0.3s;
+ }
+ 
+ button:active .circle {
+   transform: scale(0.9);
+   transition: all 0.3s;
+   box-shadow: 0 0 5px 0.5px white;
+ }
+ 
+ button:hover .button-text {
+   color: #fff;
+ }
+ 
+ button:active .button-text {
+   color: rgba(255, 255, 255, 0.459);
+ }
