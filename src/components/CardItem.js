@@ -1,7 +1,8 @@
 import {motion} from 'framer-motion'
 import '../css/CardItem.css'
 import React from 'react';
-
+import {IconButton} from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default class CardItem extends React.Component {
     constructor(props)
@@ -92,25 +93,28 @@ export default class CardItem extends React.Component {
                                     className="card back-card"
                                     variants={variants}
                                     onAnimationComplete={transformEnd}
-                                    >
-                                        <span style={{fontSize:"small", color:"#2f5496"}}>{this.props.hidden}</span>
-                                        <div className='learn-more'>
-                                            <button className="learn-more">
-                                            <span aria-hidden="true" class="circle">
-                                            <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Learn More</span>
-                                            </button>
-                                        </div>
+                                    >   
                                         <div className="X-button-container">
                                             <button className="X-button" onClick={transformController}>X</button>
                                         </div>
+
+                                        <div className="text-container">
+                                            <span style={{fontSize:"small", color:"#2f5496"}}>{this.props.hidden}</span>
+                                        </div>
+                                        
+                                        <div className='github-button-container' >
+                                            <div className='github-button'>
+                                                <IconButton>
+                                                    <GitHubIcon  fontSize='medium'/>
+                                                </IconButton>
+                                            </div>
+                                        </div>
+
                                     </motion.div>
                                 )
                                 :
                                 (
                                     <motion.div onClick={frontTransformController}
-                                    src={img}
                                     whileHover="hover" 
                                     className="card" 
                                     animate = {this.state.frontTransform ? "flipped" : ""}

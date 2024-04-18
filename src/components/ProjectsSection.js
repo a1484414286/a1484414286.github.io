@@ -50,7 +50,7 @@ export default class ProjectsSection extends Component {
               const name = img.split('/')[3].split('.')[0];
               return (
                 <Stack key={img}>
-                  <CardItem text={name} hidden= {texts[name]}img={img}></CardItem>
+                  <CardItem text={name} hidden= {texts[name]} img={img}></CardItem>
                 </Stack>
               );
             })}
