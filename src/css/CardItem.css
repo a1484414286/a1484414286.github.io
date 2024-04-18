@@ -99,6 +99,7 @@
   
   .card-container {
     height: auto;
+    width: 100%;
     overflow: hidden;
     display: absolute;
     align-items: center;
@@ -144,3 +145,40 @@
 }
 
 
+
+.back-card
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.X-button
+{
+  display: grid;
+  width: 180%;
+  height: 8%;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.X-button-container
+{
+  display: grid;
+  width: 50px;
+  height: 100%;
+  font-size: large;
+  justify-content: space-around;
+}
+
+.learn-more
+{
+  font-size: small;
+}
+
+.transformed
+{
+  transform: scale(1.5);
+  transition: transform 0.8 ease-in-out;
+}

@@ -9,18 +9,25 @@ export default class CardItem extends React.Component {
       super(props);
       this.state = {
         modal : false,
-      };
+        transformed : false,
+        frontTransform : false
+    };
     }
     render()
     {
         const variants =
         {
-            offscreen:
+            flipped :
             {
-                y: 400,
+                rotateY : 90,
+                transition:
+                {
+                    type : "spring",
+                    bounce: 0.3,
+                    duration : 0.1
+                }
             },
-
-            onscreen:
+            hover :
             {
                 y: -10,
                 rotate: 0,
@@ -33,33 +40,88 @@ export default class CardItem extends React.Component {
             }
         };
 
-      
         const modalOpen = () => {
+            this.setState({transformed : false});
             this.setState({ modal: !this.state.modal });
+            this.setState({frontTransform : false})
         }
 
+        const transformEnd = () => 
+        {
+            //this acts as a first time trigger protective mechanism 
+            //why? you may ask. it's because when the card is flipped at first, onAnimationComplete will see that there is no animation playing
+            //therefore, it will consider the animation has been completed. it will flip the card when i click it first
+            if(this.state.transformed)
+            {
+                modalOpen();
+            }
+        }
+        
+        const transformController = () => 
+        {
+            this.setState({transformed : !this.state.transformed})
+        }
+
+
+
+        const frontTransformController = () =>
+        {
+            this.setState({frontTransform : !this.state.frontTransform});
+        }
+
+        const flippedAnimation = () =>
+        {
+            //similar process thought as previous one
+            if(this.state.frontTransform)
+            {
+                this.setState({modal : !this.state.modal})
+            }
+        }
 
         const {img,text} = this.props;
                 return(
                         <motion.div
-                            onClick={modalOpen}
-                            className="card-container container "
+                            className="card-container container"
                             viewport={{ once: false, amount: 0.8 }}>
-                            {
+                                {
                                 this.state.modal ?
                                 (
-                                    <motion.div onClick={modalOpen} src={img} initial="offScreen" whileHover="onscreen" className="card" variants={variants}>
-                                        <span>{this.props.hidden}</span>
+                                    <motion.div src={img} 
+                                    animate = {this.state.transformed ? "flipped" : ""} 
+                                    whileHover="hover" 
+                                    className="card back-card"
+                                    variants={variants}
+                                    onAnimationComplete={transformEnd}
+                                    >
+                                        <span style={{fontSize:"small", color:"#2f5496"}}>{this.props.hidden}</span>
+                                        <div className='learn-more'>
+                                            <button className="learn-more">
+                                            <span aria-hidden="true" class="circle">
+                                            <span class="icon arrow"></span>
+                                            </span>
+                                            <span class="button-text">Learn More</span>
+                                            </button>
+                                        </div>
+                                        <div className="X-button-container">
+                                            <button className="X-button" onClick={transformController}>X</button>
+                                        </div>
                                     </motion.div>
                                 )
                                 :
                                 (
-                                    <motion.div onClick={modalOpen} src={img} initial="offScreen" whileHover="onscreen" className="card" variants={variants}>
+                                    <motion.div onClick={frontTransformController}
+                                    src={img}
+                                    whileHover="hover" 
+                                    className="card" 
+                                    animate = {this.state.frontTransform ? "flipped" : ""}
+                                    onAnimationComplete={flippedAnimation}
+                                    variants={variants}
+                                    >
                                         <div className='img-box'>
                                             <img className='card-image' alt="Card" src={img} />
                                         </div>
                                         <div className='title'>
-                                            <h1 style={{color : "black"}}>{text}</h1>
+                                            <h1 style={{color : "#2f5496"}}>{text}</h1>
                                         </div>
                                     </motion.div>
                                 )
