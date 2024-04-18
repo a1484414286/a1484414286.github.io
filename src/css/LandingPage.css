@@ -5,19 +5,9 @@
    max-width: 100%;
    position: relative;
    overflow: hidden;
-   flex-direction: column;
-   
+   display: flex;
 }
 
-.animated 
-{
-   display : grid;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   margin-top: 10%;
-   width: 100%;
-}
 
 .checkoutButton
 {
@@ -41,13 +31,19 @@
  
  .button-stack
  {
-   width: 30%;
-   height: 80vh;
+   width: 100%;
+   height: 100%;
    display:flex;
-   flex-direction: column;
-   align-items:flex-end;
    justify-content:flex-end;
-   gap: 20px;
+}
+
+.button-stack-left
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  
 }
  
 span:hover{
@@ -120,18 +116,37 @@ span:hover{
    padding: 4px;
    transform: rotate(45deg);
    -webkit-transform: rotate(45deg);
-   position: absolute; /* Change this */
-   bottom: -10px; /* Adjust as needed */
+   position: absolute; 
+   bottom: -10px;
    transform: translateX(-50%) rotate(45deg);
 }
 
-.about-me
+.center-container
 {
-   height: auto;
-   width: 100%;
-   align-items:end;
-   justify-content: end;
-   display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.animated 
+{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.about-me {
+  justify-content: flex-end;
+  align-items: flex-start;
+  display: flex;
+  height: 200%;
+  width: 100%;
 }
 
 .projects
@@ -257,3 +272,5 @@ button {
  button:active .button-text {
    color: rgba(255, 255, 255, 0.459);
  }
+
+ 

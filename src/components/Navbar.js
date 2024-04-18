@@ -7,7 +7,7 @@ export default class Navbar extends Component {
   render() {
     return (
 
-    <div class = "container right-bar">
+    <div>
         <motion.button className='button'
         whileHover={{scale:1.1}}
         whileTap={{scale:0.9}}>
