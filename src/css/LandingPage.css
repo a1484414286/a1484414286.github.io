@@ -20,15 +20,17 @@
    position: absolute;
    width: 0;
    height: 0;
+   z-index: 0;
 }
  
  .triangle-left {
    top: 0;
    left: 0;
    border-right: 100vw solid transparent;
-   border-bottom: 100vh solid #2f5496 ; 
+   border-bottom: 100vh solid #242c78; 
  }
  
+
  .button-stack
  {
    width: 100%;
@@ -53,7 +55,6 @@ span:hover{
 .down-arrow{
    border-left: 1.5px solid #FBEAEB;
    height: 35px;
-   width: 2%;
    position: relative; 
    display: flex; 
    align-items: center; 
@@ -72,34 +73,41 @@ span:hover{
    transform: translateX(-50%);
 }
 
-.arrow-container:hover .down-arrow {
-   margin-bottom: 3%;
-   transition: all .3s;
-   border-left: 2px solid #FBEAEB;
-   opacity: .9;
+.arrow-box
+{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width : 400) {
-  .arrow-container:hover .down-arrow {
-    margin-bottom: 20%;
+.arrow-box:hover .down-arrow{
+  margin-bottom: 6%;
+  transition: all .3s;
+  border-left: 2px solid #FBEAEB;
+  opacity: .9;
+}
+
+@media (min-width : 300) {
+  .arrow-box:hover .down-arrow {
+    margin-bottom: 30%;
     transition: all .3s;
     border-left: 2px solid #FBEAEB;
     opacity: .9;
  }
 }
 
-
-@media (max-width : 600) {
-  .arrow-container:hover .down-arrow {
-    margin-bottom: 20%;
+@media (min-width : 600) {
+  .arrow-box:hover .down-arrow {
+    margin-bottom: 25%;
     transition: all .3s;
     border-left: 2px solid #FBEAEB;
     opacity: .9;
  }
 }
 
-
-.arrow-container:hover .arrow-head{
+.arrow-box:hover .arrow-head{
    bottom: 20px;
    border-width: 0 3px 3px 0;
    
@@ -274,3 +282,20 @@ button {
  }
 
  
+ html
+ {
+  scroll-behavior: smooth;
+  z-index: 1;
+ }
+
+ a
+ {
+  text-decoration: none;
+  color: black;
+ }
+
+ #projects
+ {
+  margin-top: 100%;
+  padding-bottom: 25%;
+ }

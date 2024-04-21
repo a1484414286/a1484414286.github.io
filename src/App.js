@@ -4,6 +4,7 @@ import React from 'react';
 import './css/global.css'
 
 function App() {
+
   return (
     <div>
        <LandingPage></LandingPage>

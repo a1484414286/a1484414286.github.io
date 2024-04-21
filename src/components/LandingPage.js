@@ -12,6 +12,7 @@ export default function LandingPage() {
     visible: { opacity: 1, x: 0, transition: { duration: 3.0 } },
   };
 
+
   const color =
   {
     color : "#FF8500",
@@ -54,16 +55,23 @@ export default function LandingPage() {
         </div>
 
       <div className='button-stack'>
-        <Navbar></Navbar>
-      </div>
-
-
-      <span className='projects'>projects</span>
-      <div className='arrow-container'>
-        <div class="down-arrow">
-            <i className='arrow-head'></i>
+        <div className= 'button-stack-container'>
+          <Navbar></Navbar>
         </div>
       </div>
+
+
+      <div className='arrow-container'>
+        <span className='projects'>projects</span>
+
+        <div className='arrow-box' >
+          <div class="down-arrow">
+              <i className='arrow-head'></i>
+          </div>
+        </div>
+      </div>
+
+    
     </div>
   )
 }

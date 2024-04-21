@@ -15,8 +15,11 @@ export default class ProjectsSection extends Component {
   
   render() {
     const texts = {
-        "pokedex" : "this is a xxx app"
+      "Pocket Monster Pokedex" : "an app that contains ",
+      '"Tinder" for Elder' : "an app that helps volunteers pair up with elders",
     }
+
+
     const images = require.context('../imgs')
     const imagePaths = images.keys();
     const imageModules = imagePaths.map(images);
@@ -46,11 +49,10 @@ export default class ProjectsSection extends Component {
 
           <div className='carousel-wrapper'>
             <Stack>
-            {imageModules.map((img) => {
-              const name = img.split('/')[3].split('.')[0];
+            {Object.entries(texts).map(([key, value],index) => {
               return (
-                <Stack key={img}>
-                  <CardItem text={name} hidden= {texts[name]} img={img}></CardItem>
+                <Stack>
+                  <CardItem text={key} hidden={value} img={imageModules[index]}></CardItem>
                 </Stack>
               );
             })}
