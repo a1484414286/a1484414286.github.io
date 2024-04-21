@@ -16,14 +16,19 @@ export default function LandingPage() {
   const color =
   {
     color : "#FF8500",
-    "font-size" : "1.5em"
+    "display" : "flex",
+    "fontSize" : "2em",
+    "justify-content" : "center",
+    "align-items" : "center",
+    "width" : "100%",
+    "margin" : 0,
   }
   
   return (
     <div className="body">
       <div className='triangle triangle-left'></div>
       <div className='triangle triangle-right'></div>
-        <div className='button-stack-left'>
+      <div className='button-stack-left'>
             <Grid container spacing={5} >
             <Grid item xs={1}>
               <IconButton aria-label='github-button'>
@@ -36,26 +41,26 @@ export default function LandingPage() {
               </IconButton>
             </Grid>
           </Grid>
-        </div>
+      </div>
         <div className='center-container'>
           <div className='animated'>
-            <motion.div  initial="hidden" animate="visible" variants={lineVariants}>
-              <h4><span style= {color}>Hi, there</span></h4>
+            <motion.div className='center-text' initial="hidden" animate="visible" variants={lineVariants}>
+              <h4><span style= {color}>Hi there,</span></h4>
               <h2><span style= {color}>I'm Liang Liu, a Software developer from Florida </span></h2>
             </motion.div>
             <div className="about-me">
               <button className="learn-more">
                 <span aria-hidden="true" class="circle">
-                <span class="icon arrow"></span>
+                <span className="icon arrow"></span>
                 </span>
-                <span class="button-text">Learn More</span>
+                <span className="button-text">Learn More</span>
               </button>
             </div>
           </div>
         </div>
 
-      <div className='button-stack'>
-        <div className= 'button-stack-container'>
+      <div className='button-container'>
+        <div className='button-stack'>
           <Navbar></Navbar>
         </div>
       </div>

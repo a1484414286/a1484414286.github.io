@@ -5,13 +5,13 @@ import CardItem from './CardItem';
 import { Stack } from '@mui/material';
 
 export default class ProjectsSection extends Component {
-  constructor(props)
-  {
-    super(props);
-    this.state = {
-      progress : 33,
-    };
-  }
+  // constructor(props)
+  // {
+  //   super(props);
+  //   this.state = {
+  //     progress : 33,
+  //   };
+  // }
   
   render() {
     const texts = {
