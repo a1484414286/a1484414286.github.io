@@ -2,9 +2,12 @@
 
 /* Base styles */
 body {
-    background-color: #050817;
-    color: #f0f8ff;
+    background-color: white;
+    color: #242c78;
     letter-spacing: 0.05em; /* Equivalent to tracking-wide in Tailwind */
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
   }
   
   /* Heading styles */
@@ -33,3 +36,7 @@ body {
     cursor: pointer;
   }
   
+html
+{
+  scroll-behavior: smooth;
+}

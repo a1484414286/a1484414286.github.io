@@ -5,23 +5,24 @@ import {motion} from 'framer-motion';
 
 export default class Navbar extends Component {
   render() {
-    const click = () =>
+    const scrollToTop = () => 
     {
-      alert("clicked")
+      document.getElementById('home').scrollIntoView({behavior : 'smooth'});
     }
 
     return (
 
     <div>
+
         <motion.button 
-        className='button'
-        whileHover={{scale:1.1}}
-        whileTap={{scale:0.9}}
-        onClick={click}
+          className='button'
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          onClick={scrollToTop}
         >
           <span className='shadow'></span>
           <span className='edge'></span>
-          <span className='front'>
+          <span className='front' >
             Home
           </span>
         </motion.button>
