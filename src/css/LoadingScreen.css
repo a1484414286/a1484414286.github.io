@@ -309,3 +309,27 @@
       transform: rotate(-1turn);
     }
   }
+
+  
+
+.sunflower-seed
+{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  right: 75%;
+  transform: translate(-98%, -40%);
+  z-index: 3; /* Set the z-index to a value higher than the hamster's z-index */
+}
+
+
+.cart
+{
+  height: 140px;
+  width: 150px;
+  position: absolute;
+  top: 67%;
+  right: 75%;
+  transform: translate(-40%, -50%);
+}
