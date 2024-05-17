@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../css/ProjectSection.css'
 import CardItem from './CardItem';
 // import ProgressBar from './ProgressBar';
-import { Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default class ProjectsSection extends Component {
   // constructor(props)
@@ -16,7 +16,7 @@ export default class ProjectsSection extends Component {
   render() {
     const texts = {
       "Pocket Monster Pokedex" : "an app that contains ",
-      '"Tinder" for Elder' : "an app that helps volunteers pair up with elders",
+      'Friendly' : "an app that helps volunteers pair up with elders",
     }
 
 
@@ -45,21 +45,17 @@ export default class ProjectsSection extends Component {
         <h3>
           Projects
         </h3>
-        <div className='projects-container'>
+        <div>
 
-          <div className='carousel-wrapper'>
-            <Stack>
+            <Grid container>
             {Object.entries(texts).map(([key, value],index) => {
               return (
-                <Stack>
                   <CardItem text={key} hidden={value} img={imageModules[index]}></CardItem>
-                </Stack>
               );
             })}
-            </Stack>
+            </Grid>
             <div className='progress-bar-container'>
               {/* <ProgressBar progressValue = {this.state.progress}></ProgressBar> */}
-            </div>
             </div>
           </div>
       </div>

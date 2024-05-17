@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 import '../css/CardItem.css'
 import React from 'react';
-import {IconButton} from '@mui/material';
+import {Grid, IconButton} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default class CardItem extends React.Component {
@@ -81,6 +81,8 @@ export default class CardItem extends React.Component {
 
         const {img,text} = this.props;
                 return(
+                        <Grid item xs={6} md={4} lg={3}>
+
                         <motion.div
                             className="card-container container"
                             viewport={{ once: false, amount: 0.8 }}>
@@ -132,6 +134,8 @@ export default class CardItem extends React.Component {
                             }
 
                         </motion.div>
+                        </Grid>
+
             );
     }
 }
