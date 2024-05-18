@@ -18,6 +18,7 @@ export default function LoadingScreen() {
         wheelAndHamster.style.animationName = 'moveLeft';
         break;
       default:
+        newCartDirection = "https://imgur.com/Rwuu8f1.jpeg";
         wheelAndHamster.style.animationName = 'moveRight';
         break;
     }

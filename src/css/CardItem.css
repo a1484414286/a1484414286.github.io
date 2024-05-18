@@ -172,7 +172,7 @@
 .X-button
 {
   width: 100%;
-  height: 7.5%;
+  height: 10%;
   border: 1.5px solid #2f5496;
   border-radius: 50%;
   transition: all 0.5s;
@@ -181,7 +181,7 @@
 .X-button-container
 {
   display: flex;
-  width: 25px;
+  width: 10%;
   height: 100%;
   font-size: large;
   justify-content: space-around;

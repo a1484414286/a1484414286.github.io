@@ -1,38 +1,22 @@
 @keyframes moveRight {
   0%, 100% {
-    right: 50%;
+    right: 40%;
   }
   50% {
-    right: -20%;
+    right: -30%;
   }
 }
 
 @keyframes moveLeft {
   0%, 100% {
-    right: 50%;
+    right: 40%;
   }
   50% {
     right: 120%;
   }
 }
 
-@keyframes moveUp {
-  0%, 100% {
-    bottom: 50%;
-  }
-  50% {
-    bottom: 120%;
-  }
-}
 
-@keyframes moveDown {
-  0%, 100% {
-    bottom: -20%;
-  }
-  50% {
-    bottom: 40%;
-  }
-}
 
 .wheel-and-hamster {
     --dur: 1s;

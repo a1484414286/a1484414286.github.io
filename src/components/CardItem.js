@@ -79,10 +79,9 @@ export default class CardItem extends React.Component {
             }
         }
 
-        const {img,text} = this.props;
+        const {img,text,hidden,link} = this.props;
                 return(
-                        <Grid item xs={6} md={4} lg={3}>
-
+                        <Grid item xs={12} md={4} lg={3} >
                         <motion.div
                             className="card-container container"
                             viewport={{ once: false, amount: 0.8 }}>
@@ -101,16 +100,16 @@ export default class CardItem extends React.Component {
                                         </div>
 
                                         <div className="text-container">
-                                            <span style={{fontSize:"small", color:"#2f5496"}}>{this.props.hidden}</span>
+                                            <p style={{fontSize:"small", color:"#2f5496"}}>{hidden}</p>
                                         </div>
                                         
-                                        <div className='github-button-container' >
-                                            <div className='github-button'>
-                                                <IconButton>
-                                                    <GitHubIcon  fontSize='medium'/>
-                                                </IconButton>
+                                            <div className='github-button-container' >
+                                                <div className='github-button'>
+                                                    <IconButton  rel="stylesheet" href={link}>
+                                                        <GitHubIcon fontSize='medium'/>
+                                                    </IconButton>
+                                                </div>
                                             </div>
-                                        </div>
 
                                     </motion.div>
                                 )
