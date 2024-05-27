@@ -31,7 +31,7 @@ export default function AboutMeModal() {
                 <span aria-hidden="true" class="circle">
                 <span className="icon arrow"></span>
                 </span>
-                <span className="button-text">Learn More</span>
+                <span className="button-text">About Me</span>
             </button>
         </div>
 
@@ -48,14 +48,19 @@ export default function AboutMeModal() {
                },
              }}>
             <Fade in={open}>
-            <Box sx={style}>
-                <Typography id="transition-modal-title" variant="h6" component="h2">
-                Text in a modal
-                </Typography>
-                <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
-            </Box>
+              <Box sx={style}>
+                  <div className="X-button-container">
+                    <button className="X-button">X</button>
+                  </div>
+                  <Typography id="transition-modal-title" variant="h6" component="h2">
+                    About
+                  </Typography>
+                  <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                    I'm a Software Engineering student at Rochester Institute of Technology. I have a passion for technology and innovation, and I thrive on learning new skills and applying them to create unique and humorous application 
+                  </Typography>
+
+                 
+              </Box>
             </Fade>
         </Modal>
     </div>

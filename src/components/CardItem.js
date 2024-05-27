@@ -126,7 +126,7 @@ export default class CardItem extends React.Component {
                                             <img className='card-image' alt="Card" src={img} />
                                         </div>
                                         <div className='title'>
-                                            <h1 style={{color : "#2f5496"}}>{text}</h1>
+                                            <h1 style={{color : "#2f5496", 'text-align' : "end"}}>{text}</h1>
                                         </div>
                                     </motion.div>
                                 )
