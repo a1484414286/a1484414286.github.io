@@ -7,8 +7,12 @@ import { Grid } from '@mui/material';
 export default class ProjectsSection extends Component {
   render() {
     const texts = {
-      "Pocket Monster Pokedex" : "an app that contains ",
       "Friendly" : "an app that helps volunteers pair up with elders",
+      "Pocket Monster Pokedex" : "A simpler pokedex with concise data ",
+      "Brick Code": "A coding-practice website combining ChatGPT and LeetCode.",
+      "NutriApp" : "An app that helps users maintain their fitness.",
+      "SAO Word Game":"A bot offering real-time word games",
+      "PetMeet Cafe":"An app that connects adopters with their future pets in cafes",
     }
 
     const url = 
