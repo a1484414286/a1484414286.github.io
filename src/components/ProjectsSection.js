@@ -9,7 +9,6 @@ export default class ProjectsSection extends Component {
     const texts = {
       "Friendly" : "an app that helps volunteers pair up with elders",
       "Pocket Monster Pokedex" : "A simpler pokedex with concise data ",
-      "Brick Code": "A coding-practice website combining ChatGPT and LeetCode.",
       "NutriApp" : "An app that helps users maintain their fitness.",
       "SAO Word Game":"A bot offering real-time word games",
       "PetMeet Cafe":"An app that connects adopters with their future pets in cafes",
@@ -17,8 +16,11 @@ export default class ProjectsSection extends Component {
 
     const url = 
     [
+      "https://github.com/NekruzAsh/Google-AI-Hack",
       "https://github.com/a1484414286/Pokedex",
-      "https://github.com/NekruzAsh/Google-AI-Hack"
+      "https://github.com/a1484414286/NutriApp",
+      "https://github.com/a1484414286/SAO-word-game",
+      "https://github.com/a1484414286/PetMeet-Cafe",
     ]
 
 
